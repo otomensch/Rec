@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>WINO | CREATE FIRST.</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    background:#060B1A;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* 背景グロー */
+body::before{
+    content:"";
+    position:fixed;
+    width:700px;
+    height:700px;
+    background:radial-gradient(circle,#2563eb55 0%,transparent 70%);
+    top:-250px;
+    right:-250px;
+    z-index:-1;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:600px;
+    height:600px;
+    background:radial-gradient(circle,#1d4ed855 0%,transparent 70%);
+    bottom:-250px;
+    left:-250px;
+    z-index:-1;
+}
+
+/* ナビ */
+
+nav{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 8%;
+    position:sticky;
+    top:0;
+    backdrop-filter:blur(18px);
+    background:rgba(6,11,26,.65);
+    border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+.logo{
+    font-size:30px;
+    font-weight:700;
+    letter-spacing:4px;
+}
+
+.menu{
+    display:flex;
+    gap:35px;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    transition:.25s;
+}
+
+.menu a:hover{
+    color:#60A5FA;
+}
+
+/* Hero */
+
+.hero{
+    max-width:1200px;
+    margin:auto;
+    text-align:center;
+    padding:120px 20px 90px;
+}
+
+.hero h1{
+    font-size:72px;
+    letter-spacing:8px;
+    margin-bottom:20px;
+}
+
+.hero h2{
+    color:#60A5FA;
+    font-size:24px;
+    margin-bottom:30px;
+}
+
+.hero p{
+    color:#9CA3AF;
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+    font-size:18px;
+}
+
+/* ボタン */
+
+.buttons{
+    margin-top:45px;
+}
+
+.buttons a{
+    display:inline-block;
+    padding:16px 34px;
+    margin:10px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.primary{
+    background:#2563EB;
+    color:white;
+}
+
+.primary:hover{
+    background:#3B82F6;
+}
+
+.secondary{
+    border:1px solid #2563EB;
+    color:white;
+}
+
+.secondary:hover{
+    background:#2563EB;
+}
+
+/* Services */
+
+.services{
+    max-width:1200px;
+    margin:60px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
+    padding:20px;
+}
+
+.card{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:22px;
+    padding:35px;
+    transition:.3s;
+    backdrop-filter:blur(20px);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#3B82F6;
+}
+
+.card h3{
+    font-size:24px;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#9CA3AF;
+    line-height:1.7;
+}
+
+/* Pricing */
+
+.pricing{
+    max-width:1100px;
+    margin:90px auto;
+    padding:20px;
+}
+
+.pricing h2{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:40px;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    color:#777;
+    padding:70px 20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+WINO
+</div>
+
+<div class="menu">
+<a href="#">HOME</a>
+<a href="#">REC</a>
+<a href="#">MIX</a>
+<a href="#">MASTER</a>
+<a href="#">CONTACT</a>
+</div>
+
+</nav>
+
+<section class="hero">
+
+<h1>WINO</h1>
+
+<h2>CREATE FIRST.</h2>
+
+<p>
+Professional Recording, Mixing, Mastering and Custom Beat Production.
+Built for artists who want industry quality sound.
+</p>
+
+<div class="buttons">
+
+<a class="primary" href="#pricing">BOOK NOW</a>
+
+<a class="secondary" href="#">CONTACT</a>
+
+</div>
+
+</section>
+
+<section class="services">
+
+<div class="card">
+<h3>🎙 Recording</h3>
+<p>Professional recording with artist direction.</p>
+</div>
+
+<div class="card">
+<h3>🎛 Mixing</h3>
+<p>Clean, powerful mixes designed for HipHop and R&B.</p>
+</div>
+
+<div class="card">
+<h3>💿 Mastering</h3>
+<p>Streaming-ready masters optimized for every platform.</p>
+</div>
+
+<div class="card">
+<h3>🎹 Custom Beat</h3>
+<p>Original productions tailored exclusively to your vision.</p>
+</div>
+
+</section>
+
+<section id="pricing" class="pricing">
+
+<h2>Book Your Session</h2>
+
+<script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+
+<stripe-pricing-table
+pricing-table-id="prctbl_1Tvd4mDrlMIj9d4PXyadn24y"
+publishable-key="pk_live_51TvL9GDrlMIj9d4PsTDxZJ9wbyDT73QcFfV1RsfnStNdLSMPfk6f4CBmSEzQs4EzzjPS3AhOG9Jl4gzLaUoqUV9K00FjF0PcCV">
+</stripe-pricing-table>
+
+</section>
+
+<footer>
+
+© 2026 WINO — CREATE FIRST.
+
+</footer>
+
+</body>
+</html>
